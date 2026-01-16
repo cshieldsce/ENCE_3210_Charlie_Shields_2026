@@ -1,4 +1,4 @@
-/* Question 6
+/* Question 2 - WITH INTERRUPTS!
  * 
  * We would like to turn on and off the red, green, and blue LEDs in a sequence. 
  * Therefore, write a C program with the following specifications:

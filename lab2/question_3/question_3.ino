@@ -1,4 +1,4 @@
-/* Question 7
+/* Question 3 - WITH INTERRUPTS!
  * 
  *  We would like to develop a simple calculator with the following specifications:
  *  a) There will be three arrays each with 10 elements. The first two arrays will have integer numbers.
@@ -13,7 +13,7 @@
  *     the first and second arrays. The result will be saved in the third array and all LEDs will turn off.
  *     The operation will be applied to all remaining array elements. When all the results are saved, all
  *     LEDs will turn on.
- * 
+ *  
  */
 
 #define LED_GREEN 4                                       // Green LED pin
@@ -37,7 +37,7 @@ void setup() {
   pinMode(LED_GREEN, OUTPUT);                             // Set LED pins as output
   pinMode(LED_RED, OUTPUT);
 
-  pinMode(BUTTON_1, INPUT);                               // Setup buttons as input
+  pinMode(BUTTON_1, INPUT);                        // Setup buttons as input with pullup resistor
   pinMode(BUTTON_2, INPUT);
 
   // Setup interrupt to button pin on falling edge
