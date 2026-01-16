@@ -60,6 +60,8 @@ Detect a specified pattern with three entries in an array. The pattern is saved 
 ---
 
 ### 6. LED Sequence Control
+**Video Demo:** `images/question_6.mp4`
+
 **File:** `question_6.c`
 
 Turn on and off the red, green, and blue LEDs in a sequence with the following specifications:
@@ -75,7 +77,9 @@ Turn on and off the red, green, and blue LEDs in a sequence with the following s
 
 ---
 
-### 7. Simple Calculator
+### 7. Simple Calculator 
+**Video Demo:** `images/question_7.mp4`
+
 **File:** `question_7.c`
 
 A simple calculator with the following specifications:
