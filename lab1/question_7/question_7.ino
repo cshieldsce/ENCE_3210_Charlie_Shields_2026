@@ -61,22 +61,15 @@ void loop() {
   unsigned long lastPressTime;
   int count;
 
-  // Grab all the ISR variables:
-  // to do this safely turn off interrupts
-  // then turn them back on
-  noInterrupts();
   currentTime = gISRTimer;                                // get current time
   lastPressTime = gISRLastPressTime;                      // get last press time
   count = gISRPressCount;                                 // get press count
-  interrupts();
 
   // Reset the press count if more than 1 second has passed
   // since the clock is in 100ms increments, 10 increments = 1 second
   if ((currentTime - lastPressTime > 10) && (count != 0)) {
-    noInterrupts();                                       // disable interrupts
     gISRPressCount = 0;                                   // reset press count
     count = 0;                                            // Update local variable so LEDs update immediately
-    interrupts();                                         // enable interrupts
   }
 
   // Update the LEDs based on the count value to show operation (ADD, SUB, MUL)
@@ -133,9 +126,7 @@ void loop() {
     delay(3000);
     
     // Reset counter
-    noInterrupts();
     gISRPressCount = 0;
-    interrupts();
   }
 
   // Small delay
