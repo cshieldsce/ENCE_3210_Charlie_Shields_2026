@@ -1,6 +1,6 @@
-# Lab 1 - More C Practice
+# Lab 2 - More C Practice With Interrupts
 
-More exercises solved in C. Lab manual located in `Lab_1_Exercises.pdf`.
+More exercises solved in C but this time with Interrupts. Lab manual located in `Lab_2_Exercises.pdf`.
 
 ## Exercises
 
@@ -14,7 +14,7 @@ c) If button 1 is pressed more than button 2, then turn on the red color LED. If
 
 ---
 
-### 2. LED Sequence Control - With Interrupts!
+### 2. LED Sequence Control - With Interrupts
 **Video Demo:** `images/question_2.mp4`
 
 **File:** `question_2/question_2.c`
@@ -32,7 +32,7 @@ Turn on and off the red, green, and blue LEDs in a sequence with the following s
 
 ---
 
-### 3. Simple Calculator - With Interrupts!
+### 3. Simple Calculator - With Interrupts
 **Video Demo:** `images/question_3.mp4`
 **File:** `question_3/question_3.c`
 
