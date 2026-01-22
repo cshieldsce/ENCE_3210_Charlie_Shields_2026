@@ -16,7 +16,6 @@
 #define BUTTON_1 2                                        // First button pin
 #define BUTTON_2 3                                        // Second button pin
 
-
 volatile int gISRButton = 0;                              // Button press flag
 volatile int gISRPressCount1 = 0;                         // Number of button presses
 volatile int gISRPressCount2 = 0;                         // Number of button presses
@@ -30,13 +29,13 @@ void setup() {
   pinMode(BUTTON_1, INPUT_PULLUP);                        // Setup buttons as input with pullup resistor
   pinMode(BUTTON_2, INPUT_PULLUP);
 
-  // Setup interrupt to button pin on any change
-  attachInterrupt(digitalPinToInterrupt(BUTTON_1), isr_button1, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(BUTTON_2), isr_button2, CHANGE);
+  // Setup interrupt to button pin on falling edge
+  attachInterrupt(digitalPinToInterrupt(BUTTON_1), isr_button1, FALLING);
+  attachInterrupt(digitalPinToInterrupt(BUTTON_2), isr_button2, FALLING);
 }
 
 void loop() {
-  int pressCount1;
+  int pressCount1;                                        // Local variable to hold button press counts
   int pressCount2;
 
   noInterrupts();
@@ -44,34 +43,42 @@ void loop() {
   pressCount2 = gISRPressCount2;                          // get press count
   interrupts();
 
+  // Print the button press counts
   Serial.print("Button 1: ");
   Serial.print(pressCount1);
   Serial.print(" Button 2: ");
   Serial.println(pressCount2);
 
+  // If button 1 pressed more, turn on red LED
   if (pressCount1 > pressCount2) {
     digitalWrite(LED_RED, HIGH);
     digitalWrite(LED_GREEN, LOW);
   }
+  // If button 2 pressed more, turn on green LED
   else if (pressCount2 > pressCount1) {
     digitalWrite(LED_GREEN, HIGH);
     digitalWrite(LED_RED, LOW);
   }
+  // If both buttons pressed equal times, turn on both LEDs
   else if (pressCount1 != 0 && pressCount2 != 0 ) {
     digitalWrite(LED_GREEN, HIGH);
     digitalWrite(LED_RED, HIGH);
   }
+
+  // Wait for a second
   delay(1000);
 }
 
 void isr_button1() {  
-  if (digitalRead(BUTTON_1)) {
+  // Check if button is pressed
+  if (digitalRead(BUTTON_1) == LOW) {
       gISRPressCount1++;                                     // Increment press count
   }
 }
 
 void isr_button2() {  
-  if (digitalRead(BUTTON_2)) {
+  // Check if button is pressed
+  if (digitalRead(BUTTON_2) == LOW) {
       gISRPressCount2++;                                     // Increment press count
   }
 }

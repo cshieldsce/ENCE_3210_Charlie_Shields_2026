@@ -14,7 +14,7 @@
 
 #define TIME 1000                  // Time delay in milliseconds
 
-volatile int isrLEDFlag = 0;                // Flag for ISR to control LED sequence
+volatile int isrLEDFlag = 0;       // Flag for ISR to control LED sequence
 
 void setup() {
   Serial.begin(9600);              // Start serial at 9600 baud rate

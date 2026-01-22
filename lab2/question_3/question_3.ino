@@ -37,7 +37,7 @@ void setup() {
   pinMode(LED_GREEN, OUTPUT);                             // Set LED pins as output
   pinMode(LED_RED, OUTPUT);
 
-  pinMode(BUTTON_1, INPUT);                        // Setup buttons as input with pullup resistor
+  pinMode(BUTTON_1, INPUT);                               // Setup buttons as input
   pinMode(BUTTON_2, INPUT);
 
   // Setup interrupt to button pin on falling edge

@@ -9,17 +9,17 @@
  * 
  */
 
-#define BUTTON_1 2                    
-#define ARRAY_SIZE 10
+#define BUTTON_1 2           // First button pin  
+#define ARRAY_SIZE 10        // Size of the arrays
 
-int gTarget[ARRAY_SIZE];
-int gResult[ARRAY_SIZE];
+int gTarget[ARRAY_SIZE];     // Target array
+int gResult[ARRAY_SIZE];     // Result array
 
 volatile int gISRCalculate = 0;
 
 void setup() {
-  Serial.begin(9600);                                     // Start serial at 9600 baud rate
-  pinMode(BUTTON_1, INPUT);                               // Setup buttons as input with pullup resistor
+  Serial.begin(9600);        // Start serial at 9600 baud rate
+  pinMode(BUTTON_1, INPUT);  // Setup buttons as input with pullup resistor
 
   // Populate array
   for (int i = 0; i<=ARRAY_SIZE-1; i++) {
@@ -33,19 +33,24 @@ void setup() {
 void loop() {
   if (gISRCalculate)
   {
+    // For loop to go through array
     Serial.print("--------------------\n");
-    for (int i = 0; i<=ARRAY_SIZE-1; i++) {
-      gResult[i] = 2 * gTarget[i] - gTarget[i-1];
+    for (int i = 0; i<=ARRAY_SIZE-1; i++) { 
+      // Perform calculation (y[n] = 2*x[n] - x[n-1])
+      gResult[i] = 2 * gTarget[i] - gTarget[i-1]; 
 
+      // Print the result
       Serial.print("Target Value: ");
       Serial.print(gTarget[i]);
       Serial.print("  Result Value: ");
       Serial.println(gResult[i]);
     }
-    gISRCalculate = ~gISRCalculate;
+    gISRCalculate = ~gISRCalculate;     // Reset calculate flag
   }
 }
 
 void isr_button() {
-  gISRCalculate = ~gISRCalculate;
+    if (digitalRead(BUTTON_1) == LOW) { // Check if button pressed
+      gISRCalculate = ~gISRCalculate;   // Set calculate flag
+    }
 }
