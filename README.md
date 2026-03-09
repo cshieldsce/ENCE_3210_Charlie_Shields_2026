@@ -12,8 +12,8 @@
 | `lab2_interrupts/` | ISR-based button counter, LED sequencer, calculator, filtering |
 | `lab3_async_tasks/` | Async tasks with interrupt timers and R-2R DAQ |
 | `lab4_firmware/` | Firmware engineering: solar charger & fan controller |
-| `Documentation_B/` | DAC prototype circuit and KiCad files |
-| `Documentation_C/` | DSP shield, SPI, I2C, SSD1306, and DAC test projects |
+| `Documentation_B/` | DAC prototype circuit and KiCad PCB files |
+| `Documentation_C/` | DSP Shield documentation, PCB design, and demo videos |
 | `HAL_Drivers/` | Hardware abstraction layer drivers (ADC, PWM, HC-SR04, MPU6050, SSD1306) |
 | `c_workshop/` | C language warm-up exercises |
 
@@ -62,38 +62,34 @@ Also includes a **5-bit R-2R DAQ circuit** built and tested with oscilloscope ve
 ### Lab 4 — Firmware Engineering
 > 📁 [`lab4_firmware/`](labs/lab4_firmware/README.md)
 
-Firmware design exercises. Lab report in `Lab_4.pdf`.
+Firmware design exercises built and tested on the DSP Shield.
 
-- **Exercise 2 — Solar Charger:** Firmware for a solar charging control system (video demo included)
-- **Exercise 4 — Fan Controller:** PWM-based fan speed controller with block diagram and video demo
+- **Exercise 2 — Solar Charger:** Firmware for a solar charging control system
+- **Exercise 4 — Fan Controller:** PWM-based fan speed controller with block diagram
+
+> 🎥 Demo videos for both projects available in [`Documentation_C/`](Documentation_C/README.md#shield-demos)
 
 ---
 
 ## Documentation
 
-### Documentation_B — DAC Prototype & KiCad
+### Documentation B — DAC Prototype & KiCad
 > 📁 [`Documentation_B/`](Documentation_B/README.md)
 
 - 5-bit R-2R DAQ prototype built in lab and verified on oscilloscope
 - Falstad circuit simulation
-- KiCad schematic files for the Arduino UNO Shield
+- KiCad schematic and PCB layout files for the Arduino UNO Shield
 
-### Documentation_C — DSP Shield & Peripheral Tests
+### Documentation C — DSP Shield
 > 📁 [`Documentation_C/`](Documentation_C/README.md)
 
-Reference implementations and test projects for peripherals used throughout the course.
+Full documentation for the DSP Shield design and fabrication.
 
-| Project | Description |
-|---|---|
-| `DAC_Test/` | Basic DAC output test |
-| `DAC_ISR_Test/` | DAC output driven by ISR |
-| `DSP_Shield_Filters/` | FIR/IIR filter implementations on DSP shield |
-| `DSP_Shield_Rotating/` | Rotating display/motor demo on DSP shield |
-| `I2C_Example_Raw_DS3231/` | Raw I2C communication with DS3231 RTC |
-| `i2c_test/` | I2C bus test scaffold |
-| `SPI_Example_Raw_LEDMatrix/` | Raw SPI communication with LED matrix |
-| `spi_test/` | SPI bus test scaffold |
-| `SSD1306_Test/` | OLED display test using SSD1306 driver |
+- Shield specifications and block diagram
+- 10-bit R-2R Ladder DAC design and prototype
+- KiCad PCB schematic, layout, 3D renders, and gerber files
+- Interactive BOM
+- Live demo videos of firmware running on the shield
 
 ---
 
@@ -109,7 +105,7 @@ Reusable hardware abstraction layer drivers developed during the course.
 | `HC_SR04_Drivers_v1/` | HC-SR04 ultrasonic sensor driver (v1) |
 | `HC_SR04_Drivers_v2/` | HC-SR04 driver with interrupt support (v2) |
 | `HC_SR04_Drivers_v3/` | HC-SR04 driver with filtered output (v3) |
-| `mpu6050_test/` | MPU-6050 IMU (I2C) test and driver |
+| `MPU6050_Test/` | MPU-6050 IMU (I2C) test and driver |
 | `SSD1306_Test/` | SSD1306 OLED HAL driver test |
 
 ---
