@@ -1,0 +1,67 @@
+/*!
+* @brief Timer 2 FAST PWM
+*
+* https://docs.arduino.cc/tutorials/generic/secrets-of-arduino-pwm/
+*
+* Date: 2/11/2024
+*/
+#define RED_LED   8
+#define GREEN_LED 4
+#define BLUE_LED  7
+
+// Timer 0 PWM Pins
+#define PIN_5     5  // OC0A -> RGB_BLUE
+#define PIN_6     6  // OC0B -> RGB_GREEN
+
+// Timer 1 PWM Pins
+#define PIN_9     9   // OC1A -> RGB_RED
+#define PIN_10    10  // OC1B
+
+// Timer 2 PWM Pins
+#define PIN_11    11  // OC2A
+#define PIN_3     3   // OC2B -> BUTTON_2
+
+void setup() {
+  // Initialize serial
+  Serial.begin(9600);
+
+  // Initialize LEDs
+  pinMode(RED_LED, OUTPUT);
+  pinMode(GREEN_LED, OUTPUT);
+  pinMode(BLUE_LED, OUTPUT);
+
+  // Initialize PWM Pins
+  pinMode(PIN_3, OUTPUT);
+  pinMode(PIN_5, OUTPUT);
+  pinMode(PIN_6, OUTPUT);
+  pinMode(PIN_9, OUTPUT);
+  pinMode(PIN_10, OUTPUT);
+  pinMode(PIN_11, OUTPUT);
+
+  // Initialize Timer2 (8bit)
+  // Speed of Timer2 = 16MHz/64 = 250kHz
+  // Phase Correct PWM Frequency -> 250kHz/255/2 = 490.2Hz
+  TCCR2A = 0;
+  TCCR2B = 0;
+
+  // Waveform Mode
+  TCCR2A |= (1<<WGM20);  // Phase Correct
+  // Control
+  TCCR2A |= (1<<COM2A1) | (1<<COM2B1); 
+  // Start Timer by setting the prescaler
+  TCCR2B |= (1<<CS22);  // 64 prescaler
+
+  OCR2A = 180;
+  OCR2B = 50;
+}
+
+void loop() 
+{
+  // idle
+  for(int i=0; i<255; i++){
+    OCR2A = i;
+    OCR2B = i;
+    //delayMicroseconds(500); 
+    delay(10);
+  }
+}

@@ -1,0 +1,102 @@
+<mxfile host="65bd71144e">
+    <diagram id="Rjewe7Hmec1rsc39kXa_" name="Page-1">
+        <mxGraphModel dx="1163" dy="357" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Button 1&lt;br&gt;(Pin 2)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="233" y="219" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Arduino UNO" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;spacingTop=7;spacingLeft=0;spacingBottom=-22;fontStyle=1;strokeWidth=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="170" width="290" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Main Loop:" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;spacingBottom=-24;strokeWidth=1;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="375" y="206" width="260" height="164" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Timer ISR:" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;spacingBottom=-24;fillColor=#ffcc99;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="375" y="384" width="261" height="196" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Green LED&lt;br&gt;(Pin 4)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="767" y="388" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Red LED&lt;br&gt;(Pin 5)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffcccc;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="767" y="487" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;" edge="1" parent="1" source="10" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Update" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;labelBackgroundColor=light-dark(#b9c8d3, #ededed);" vertex="1" connectable="0" parent="12">
+                    <mxGeometry x="-0.3247" relative="1" as="geometry">
+                        <mxPoint y="2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="digitalRead(2)" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="245" width="100" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="gButton1State" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+                    <mxGeometry x="405" y="314" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=0;curved=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" target="6">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="435" y="463" as="sourcePoint"/>
+                        <mxPoint x="690.0000000000014" y="474" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="435" y="424"/>
+                            <mxPoint x="680" y="424"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="HIGH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;labelBackgroundColor=#00FF00;" vertex="1" connectable="0" parent="16">
+                    <mxGeometry x="0.6161" relative="1" as="geometry">
+                        <mxPoint x="14" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="If greenCounter &lt;br&gt;≥ 5&lt;br&gt;(1Hz)&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;spacingBottom=-16;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="441" width="90" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=none;html=1;entryX=0.045;entryY=0.293;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="18" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Toggle &lt;br&gt;(10Hz)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;labelBackgroundColor=light-dark(#FF9933,#EDEDED);" vertex="1" connectable="0" parent="19">
+                    <mxGeometry x="0.3492" relative="1" as="geometry">
+                        <mxPoint x="-5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;entryX=0.002;entryY=0.616;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;rounded=0;curved=0;entryPerimeter=0;" edge="1" parent="1" target="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="576.5" y="530.5" as="sourcePoint"/>
+                        <mxPoint x="749.56" y="515.26" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="740" y="530"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="LOW" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;labelBackgroundColor=#FF3333;" vertex="1" connectable="0" parent="20">
+                    <mxGeometry x="0.0901" y="-1" relative="1" as="geometry">
+                        <mxPoint x="30" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="If gButton1State&lt;br&gt;== HIGH" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;spacingBottom=-7;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="462" width="90" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.mscae.system_center.admin_console;strokeWidth=1;fillColor=light-dark(#181111, #ededed);" vertex="1" parent="1">
+                    <mxGeometry x="761" y="259" width="90" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="If gTimer&lt;br&gt;≥ 30&lt;br&gt;(3 secs)" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;spacingBottom=-7;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="248" width="90" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="25" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Serial Output&lt;br&gt;(9600 bps)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBorderColor=default;labelBackgroundColor=light-dark(#eeeeee, #ededed);" vertex="1" connectable="0" parent="26">
+                    <mxGeometry x="0.475" y="-2" relative="1" as="geometry">
+                        <mxPoint x="-16" y="-2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
