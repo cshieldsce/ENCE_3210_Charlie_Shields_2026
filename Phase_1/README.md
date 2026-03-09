@@ -20,6 +20,7 @@
 The COSGC DemoSat kit is a modular Arduino-based payload designed for high-altitude balloon flights. It collects atmospheric and inertial data, stores it on a microSD card, and uses LEDs to provide visual system status.
 
 ![DemoSat Finished PCB](images/demosat_pcb.png)
+
 *Completed DemoSat Balloon Shield mounted on Arduino Uno. Source: [COSGC Sensors Part 2 workshop slides](https://www.colorado.edu/center/spacegrant/sensors-part2-slides).*
 
 ---
