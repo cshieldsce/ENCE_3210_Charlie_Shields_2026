@@ -99,16 +99,13 @@ KiCad project files: [`../Documentation_B/KiCad/`](../Documentation_B/KiCad/)
 
 ### Interactive BOM
 
-> ⚠️ The interactive BOM requires a browser to view. Click the link below or view the embedded version (works on GitHub and most markdown renderers).
+> The interactive BOM allows you to visually locate components on the PCB layout. Open it in a browser for full functionality.
 
-🔗 [Open Interactive BOM](../Documentation_B/KiCad/Uno_Shield_DSP_Class_v1_Template_LAY/Uno_Shield_DSP_Class_v1/BOM/ibom.html)
-
-<iframe 
-  src="../Documentation_B/KiCad/Uno_Shield_DSP_Class_v1_Template_LAY/Uno_Shield_DSP_Class_v1/BOM/ibom.html" 
-  width="100%" 
-  height="600px" 
-  style="border: 1px solid #ccc; border-radius: 4px;">
-</iframe>
+<p align="center">
+  <a href="../Documentation_B/KiCad/Uno_Shield_DSP_Class_v1_Template_LAY/Uno_Shield_DSP_Class_v1/BOM/ibom.html">
+    <img src="https://img.shields.io/badge/Interactive%20BOM-Open-green?style=for-the-badge&logo=github" alt="Open Interactive BOM"/>
+  </a>
+</p>
 
 ### Gerber Files
 
@@ -135,7 +132,7 @@ Gerber files for fabrication:
 > Fan speed controlled via PWM based on temperature/input readings. Full source code: [`lab4_firmware/fan_controller/`](../labs/lab4_firmware/fan_controller/fan_controller.ino)
 
 <p align="center">
-  <img src="images/fan_controller.gif" width="400" style="transform: rotate(90deg); alt="Fan Controller Demo"/>
+  <img src="images/fan_controller.gif" width="400" style="transform: rotate(90deg);" alt="Fan Controller Demo"/>
 </p>
 
 ### Solar Charge Controller
