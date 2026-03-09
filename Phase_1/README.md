@@ -132,7 +132,7 @@ The core architecture (Arduino Uno + OpenLog + LEDs) remains viable and all thos
 - Resolve the availability issue
 - Reduce component count
 - Free up analog pins A2 and A3 for future use
-- Stay well below the $147 and 200g constraints
+- Well below the $147 and 200g constraints
 
 ![BME280 Block Diagram](images/bme280_block_diagram.png)
 *Block diagram of BME280 Source: [BMA150 Datasheet](https://cdn.sparkfun.com/assets/learn_tutorials/4/1/9/BST-BME280_DS001-10.pdf).*
