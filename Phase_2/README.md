@@ -81,4 +81,3 @@ Phase_2/
 
 - [KiCad](https://www.kicad.org/) — Schematic & PCB design
 - [draw.io](https://draw.io) — System block diagram
-- Arduino IDE — Firmware development
