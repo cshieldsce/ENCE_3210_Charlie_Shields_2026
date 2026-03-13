@@ -1,0 +1,8 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "DEV-13712")(type "KiCad")(uri "${KIPRJMOD}/libraries/DEV-13712")(options "")(descr ""))
+  (lib (name "TMP36GT9")(type "KiCad")(uri "${KIPRJMOD}/libraries/TMP36GT9")(options "")(descr ""))
+  (lib (name "COSGC")(type "KiCad")(uri "${KIPRJMOD}/libraries/logos/COSGC")(options "")(descr ""))
+  (lib (name "DU")(type "KiCad")(uri "${KIPRJMOD}/libraries/logos/DU")(options "")(descr ""))
+  (lib (name "CU")(type "KiCad")(uri "${KIPRJMOD}/libraries/logos/CU")(options "")(descr ""))
+)

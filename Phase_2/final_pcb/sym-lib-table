@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "DEV-13712")(type "KiCad")(uri "${KIPRJMOD}/libraries/DEV-13712/DEV-13712.kicad_sym")(options "")(descr ""))
+  (lib (name "TMP36GT9")(type "KiCad")(uri "${KIPRJMOD}/libraries/TMP36GT9/TMP36GT9.kicad_sym")(options "")(descr ""))
+)
