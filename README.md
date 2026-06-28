@@ -3,6 +3,34 @@ All my labs, projects, and drivers for Microprocessor Systems I, Winter 2026.
 
 ---
 
+## Project Documentation
+
+### Documentation B - DAC Prototype & KiCad
+> 📁 [`Documentation_B/`](Documentation_B/README.md)
+
+![DAC circuit simulated in Falstad](https://github.com/cshieldsce/ENCE_3210_Charlie_Shields_2026/raw/main/Documentation_B/DAC_Prototype/images/falstad_circuit.png)
+
+- 5-bit R-2R DAQ prototype built in lab and verified on oscilloscope
+- Falstad circuit simulation
+- KiCad schematic and PCB layout files for the Arduino UNO Shield
+
+### Documentation C - DSP Shield
+> 📁 [`Documentation_C/`](Documentation_C/README.md)
+
+![DAC board 3d model](https://github.com/cshieldsce/ENCE_3210_Charlie_Shields_2026/raw/main/Documentation_B/KiCad/images/pcb_3d_view.png)
+
+![PCB routing](https://github.com/cshieldsce/ENCE_3210_Charlie_Shields_2026/raw/main/Documentation_B/KiCad/images/pcb_kicad_editor.png)
+
+Full documentation for the DSP Shield design and fabrication.
+
+- Shield specifications and block diagram
+- 10-bit R-2R Ladder DAC design and prototype
+- KiCad PCB schematic, layout, 3D renders, and gerber files
+- Interactive BOM
+- Live demo videos of firmware running on the shield
+
+---
+
 ## Labs
 
 ### Lab 1 — More C Practice
@@ -52,28 +80,6 @@ Firmware design exercises built and tested on the DSP Shield.
 - **Exercise 4 — Fan Controller:** PWM-based fan speed controller with block diagram
 
 > Demo videos for both projects available in [`Documentation_C/`](Documentation_C/README.md#shield-demos)
-
----
-
-## Documentation
-
-### Documentation B — DAC Prototype & KiCad
-> 📁 [`Documentation_B/`](Documentation_B/README.md)
-
-- 5-bit R-2R DAQ prototype built in lab and verified on oscilloscope
-- Falstad circuit simulation
-- KiCad schematic and PCB layout files for the Arduino UNO Shield
-
-### Documentation C — DSP Shield
-> 📁 [`Documentation_C/`](Documentation_C/README.md)
-
-Full documentation for the DSP Shield design and fabrication.
-
-- Shield specifications and block diagram
-- 10-bit R-2R Ladder DAC design and prototype
-- KiCad PCB schematic, layout, 3D renders, and gerber files
-- Interactive BOM
-- Live demo videos of firmware running on the shield
 
 ---
 
