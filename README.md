@@ -1,21 +1,5 @@
 # ENCE 3210 - Microprocessor Systems I
-> All my labs, projects, and drivers for Microprocessor Systems I, Winter 2026.
-> Charlie Shields — University of Denver
-
----
-
-## Repository Structure
-
-| Folder | Description |
-|---|---|
-| `lab1_embedded_c/` | C practice: math, arrays, sorting |
-| `lab2_interrupts/` | ISR-based button counter, LED sequencer, calculator, filtering |
-| `lab3_async_tasks/` | Async tasks with interrupt timers and R-2R DAQ |
-| `lab4_firmware/` | Firmware engineering: solar charger & fan controller |
-| `Documentation_B/` | DAC prototype circuit and KiCad PCB files |
-| `Documentation_C/` | DSP Shield documentation, PCB design, and demo videos |
-| `HAL_Drivers/` | Hardware abstraction layer drivers (ADC, PWM, HC-SR04, MPU6050, SSD1306) |
-| `c_workshop/` | C language warm-up exercises |
+All my labs, projects, and drivers for Microprocessor Systems I, Winter 2026.
 
 ---
 
@@ -67,7 +51,7 @@ Firmware design exercises built and tested on the DSP Shield.
 - **Exercise 2 — Solar Charger:** Firmware for a solar charging control system
 - **Exercise 4 — Fan Controller:** PWM-based fan speed controller with block diagram
 
-> 🎥 Demo videos for both projects available in [`Documentation_C/`](Documentation_C/README.md#shield-demos)
+> Demo videos for both projects available in [`Documentation_C/`](Documentation_C/README.md#shield-demos)
 
 ---
 
@@ -117,10 +101,3 @@ Warm-up C programming exercises completed at the start of the course.
 
 - `quadratic.c` — Solve quadratic equations using a struct to return both roots
 - `scanf_for_loop.c` — User input processing with for loops
-
----
-
-## Course Info
-- **Course:** ENCE 3210 — Microprocessor Systems I
-- **Term:** Winter 2026
-- **Student:** Charlie Shields
